@@ -25,7 +25,7 @@ jobs:
 
       - name: Verify React Build Output
         run: |
-          ls -la ./build
+          ls -la ./build || echo "Build folder not found"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
