@@ -27,8 +27,11 @@ jobs:
         run: |
           ls -la ./build || echo "Build folder not found"
 
+      - name: List files in build output
+        run: ls -la dist
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build
+          folder: dist  
